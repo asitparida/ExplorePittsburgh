@@ -11,10 +11,10 @@ class App extends React.Component<any, any> {
     this.state = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       places: [
-        { id: 1, name: 'Lorem Ipsum', description: 'Excepteur sint occaecat', img: carnegieArtImg },
-        { id: 1, name: 'Lorem Ipsum', description: 'Excepteur sint occaecat', img: carnegieArtImg },
-        { id: 1, name: 'Lorem Ipsum', description: 'Excepteur sint occaecat', img: carnegieArtImg },
-        { id: 1, name: 'Lorem Ipsum', description: 'Excepteur sint occaecat', img: carnegieArtImg }
+        { id: 1, name: 'Lorem Ipsum 1', description: 'Excepteur sint occaecat', img: carnegieArtImg },
+        { id: 1, name: 'Lorem Ipsum 2', description: 'Excepteur sint occaecat', img: carnegieArtImg },
+        { id: 1, name: 'Lorem Ipsum 3', description: 'Excepteur sint occaecat', img: carnegieArtImg },
+        { id: 1, name: 'Lorem Ipsum 4', description: 'Excepteur sint occaecat', img: carnegieArtImg }
       ],
       showContent: false
     };
