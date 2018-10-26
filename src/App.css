@@ -229,7 +229,7 @@ img.show {
 }
 .backdrop .overlay .logo-pitts {
   font-weight: 100;
-  font-size: 100px;
+  font-size: 150px;
   margin: 60px 0;
   letter-spacing: 15px;
   color: rgba(255, 255, 255, 0.5);
@@ -348,7 +348,7 @@ img.show {
   text-align: center;
   color: #fff;
   opacity: 0.75;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .landing-places {
   width:100%;
@@ -362,15 +362,14 @@ img.show {
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
   margin: 0 20px;
-  min-width: 20%;
-  background-image: url("assets/carnegie_museum_art.jpg");
+  min-width: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   cursor: pointer;
-  min-width: calc(20% - 20px);
 }
 .landing-places .place .place-wrapper {
   width: 100%;
@@ -399,6 +398,8 @@ img.show {
   width: 100%;
   height: 100%;
   position: absolute;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   top: 0;
   left: 0;
   background: transparent;
@@ -449,6 +450,17 @@ img.show {
   cursor: pointer;
 }
 
+.show-toggle:not(.back-to-main) {
+  animation: keepin-popup 2s linear 0s infinite;
+}
+
+.show-toggle.back-to-main {
+  position: absolute;
+  top: 0px;
+  z-index: 9999;
+  border: none;
+}
+
 .show-toggle i {
   font-size: 48px;
   line-height: 68px;
@@ -456,35 +468,17 @@ img.show {
   transition: color 0.3s linear 0s;
 }
 
-.show-toggle:hover {
+.show-toggle:not(.back-to-main):hover {
   transform: scale(1.05, 1.05);
   background: #fff;
 }
-.show-toggle:hover i {
+.show-toggle:not(.back-to-main):hover i {
   color: #000;
 }
-.place-content {
-  width: 100%;
-  flex: 1;
-  order: 2;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: slide-fade-up 1s ease-out 0s forwards;
-}
 
-.place-content p {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-  font-weight: 100;
-  font-size: 36px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.70);
+.show-toggle.back-to-main:hover i {
+  color: rgba(255, 255, 255, 1);
 }
-
 
 @keyframes slide-fade-up {
   0% {
@@ -514,5 +508,24 @@ img.show {
   100% {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+@keyframes keepin-popup {
+  0% {
+    transform: scale(1,1);
+  }
+  10% {
+    transform: scale(1.15,1.15);
+    border-color: rgba(255, 255, 255, 1);
+  }
+  20% {
+    transform: scale(0.90,0.90)
+  }
+  30% {
+    transform: scale(1, 1);
+    border-color: rgba(255, 255, 255, 0.1);;
+  }
+  100% {
+    transform: scale(1,1);
   }
 }

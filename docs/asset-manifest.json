@@ -1,8 +1,11 @@
 {
-  "main.css": "static/css/main.d6032606.css",
-  "main.css.map": "static/css/main.d6032606.css.map",
-  "main.js": "static/js/main.88c22173.js",
-  "main.js.map": "static/js/main.88c22173.js.map",
+  "main.css": "static/css/main.520b1a60.css",
+  "main.css.map": "static/css/main.520b1a60.css.map",
+  "main.js": "static/js/main.649ce78b.js",
+  "main.js.map": "static/js/main.649ce78b.js.map",
   "static/media/14862848018_d05d01dcd9_k.jpg": "static/media/14862848018_d05d01dcd9_k.cbcd5104.jpg",
-  "static/media/carnegie_museum_art.jpg": "static/media/carnegie_museum_art.36f5237e.jpg"
+  "static/media/carnegie_museum_art.jpg": "static/media/carnegie_museum_art.36f5237e.jpg",
+  "static/media/church_brew.jpg": "static/media/church_brew.d1006e4b.jpg",
+  "static/media/duquesne_incline.jpg": "static/media/duquesne_incline.9ab63bbc.jpg",
+  "static/media/mattress_factory.jpg": "static/media/mattress_factory.92714db4.jpg"
 }

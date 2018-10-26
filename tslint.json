@@ -8,6 +8,14 @@
     ]
   },
   "rules": {
-    "no-console": 0
+    "no-console": false,
+    "ordered-imports": false,
+    "max-classes-per-file":false,
+    "max-line-length": false,
+    "object-literal-shorthand": false,
+    "jsx-no-lambda": false,
+    "object-literal-sort-keys": false,
+    "no-string-literal": false,
+    "no-unused-variable": false
   }
 }
