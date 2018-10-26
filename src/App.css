@@ -1,0 +1,518 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.content-width {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button.btn-bunbun {
+  outline: #74121d;
+  color: #74121d;
+  background: transparent;
+  color: #74121d;
+  min-width: 100px;
+  padding: 0 15px;
+  line-height: 48px;
+  height: 48px;
+  border: 2px solid #74121d;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button.btn-bunbun.primary {
+  background: #74121d;
+  color: #ffffff;
+}
+
+button.btn-bunbun.primary[disabled] {
+  background: transparent;
+  color: #74121d;
+  cursor: not-allowed;
+}
+
+button.btn-bunbun[disabled] {
+  opacity: 0.15;
+  cursor: not-allowed;
+}
+
+button.btn-bunbun:not([disabled]):hover,
+button.btn-bunbun:not([disabled]):focus button.btn-bunbun:not([disabled]):active {
+  background: #74121d;
+  color: #fff;
+}
+
+button.btn-bunbun:active,
+button.btn-bunbun:hover {
+  background: #74121d;
+  cursor: pointer;
+}
+
+button.btn-bunbun:active {
+  background: #74121d;
+  -moz-transform: scale(0.98, 0.98);
+  -ms-transform: scale(0.98, 0.98);
+  -o-transform: scale(0.98, 0.98);
+  -webkit-transform: scale(0.98, 0.98);
+  transform: scale(0.98, 0.98);
+}
+
+button.btn-bunbun.disabled,
+button.btn-bunbun[disabled],
+button.btn-bunbun[like-disabled=true] {
+  opacity: 0.6;
+}
+
+button.btn-bunbun.disabled:active,
+button.btn-bunbun.disabled:hover,
+button.btn-bunbun[disabled]:active,
+button.btn-bunbun[disabled]:hover,
+button.btn-bunbun[like-disabled=true]:active,
+button.btn-bunbun[like-disabled=true]:hover {
+  background: transparent;
+}
+
+button.btn-bunbun.disabled:active,
+button.btn-bunbun[disabled]:active,
+button.btn-bunbun[like-disabled=true]:active {
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.color-prune {
+  color: #74121d !important;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95, 0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cart-animation {
+  0% {
+    transform: scale(0.95, 0.95);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fade-box-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95, 0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+img {
+  /* opacity: 0 !important; */
+}
+
+img.show {
+  opacity: 1 !important;
+  transition: opacity 0.2s linear 0s;
+}
+
+.hidden-img {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  float: left;
+  background-image: url("assets/14862848018_d05d01dcd9_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  background-position: bottom;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s linear 0s;
+}
+
+.backdrop.hide {
+  opacity: 0;
+}
+
+.backdrop .overlay {
+  background-color: rgba(0, 0, 0, 0.48);
+  float: left;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop .overlay .logo-holder {
+  width: 200px;
+  display: block;
+  margin: 0px auto 0 auto;
+}
+.backdrop .overlay .logo-pitts {
+  font-weight: 100;
+  font-size: 100px;
+  margin: 60px 0;
+  letter-spacing: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.backdrop .overlay .logo-holder img {
+  width: 100%;
+}
+
+.backdrop .landing-content {
+  flex: initial;
+  width: 100%;
+  padding: 0 20px;
+  animation: slide-fade-up 1s ease-out 0s forwards;
+  position: relative;
+  z-index: 3;
+}
+
+.backdrop .nav-bar {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+
+.backdrop .nav-bar li {
+  display: inline-block;
+  line-height: 72px;
+  height: 72px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: small;
+  margin-left: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.backdrop .nav-bar li.muted {
+  opacity: 0.5;
+  cursor: none;
+}
+
+.backdrop .nav-bar li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.backdrop .order-button {
+  margin: 60px auto 45px auto;
+  display: block;
+  background: #74121d;
+  height: 80px;
+  line-height: 80px;
+  width: 150px;
+  text-align-last: center;
+  color: #ffffff;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-size: small;
+  letter-spacing: 2px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.backdrop .order-button:active,
+.backdrop .order-button:hover {
+  background: #74121d;
+  cursor: pointer;
+}
+
+.backdrop .order-button:active {
+  background: #74121d;
+  -moz-transform: scale(0.98, 0.98);
+  -ms-transform: scale(0.98, 0.98);
+  -o-transform: scale(0.98, 0.98);
+  -webkit-transform: scale(0.98, 0.98);
+  transform: scale(0.98, 0.98);
+}
+
+.backdrop .order-button.disabled,
+.backdrop .order-button[disabled],
+.backdrop .order-button[like-disabled=true] {
+  opacity: 0.6;
+}
+
+.backdrop .order-button.disabled:active,
+.backdrop .order-button.disabled:hover,
+.backdrop .order-button[disabled]:active,
+.backdrop .order-button[disabled]:hover,
+.backdrop .order-button[like-disabled=true]:active,
+.backdrop .order-button[like-disabled=true]:hover {
+  background: transparent;
+}
+
+.backdrop .order-button.disabled:active,
+.backdrop .order-button[disabled]:active,
+.backdrop .order-button[like-disabled=true]:active {
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.backdrop .landing-description {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  font-size: large;
+  font-weight: 100;
+  text-align: center;
+  color: #fff;
+  opacity: 0.75;
+  margin-bottom: 60px;
+}
+.landing-places {
+  width:100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 20px 0;
+}
+.landing-places .place {
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  margin: 0 20px;
+  min-width: 20%;
+  background-image: url("assets/carnegie_museum_art.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+  min-width: calc(20% - 20px);
+}
+.landing-places .place .place-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  padding: 100px 0 20px 0;
+}
+.landing-places .place.active:after {
+  content: '';
+  border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+  height: 4px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  animation: slide-from-left 0.3s ease-out 0s forwards;
+}
+.landing-places .place.left.active:after {
+  animation: slide-from-left 0.3s ease-out 0s forwards;
+}
+.landing-places .place.right.active:after {
+  animation: slide-from-right 0.3s ease-out 0s forwards;
+}
+.landing-places .place-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.10), rgba(0,0,0,1));
+  z-index: 1;
+  transition: background 0.3s linear 0s;
+}
+
+.landing-places .place:hover  .place-overlay{
+  background: rgba(0,0,0,0.50);
+}
+
+.landing-places .place label {
+  font-weight: 500;
+  padding: 00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  position: relative;
+}
+.landing-places .place p {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+}
+
+.show-toggle {
+  position: relative;
+  top: 60px;
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  transform-origin: center center;
+  transition: background 0.3s linear 0s;
+  cursor: pointer;
+}
+
+.show-toggle i {
+  font-size: 48px;
+  line-height: 68px;
+  color: rgba(255, 255, 255, 0.25);
+  transition: color 0.3s linear 0s;
+}
+
+.show-toggle:hover {
+  transform: scale(1.05, 1.05);
+  background: #fff;
+}
+.show-toggle:hover i {
+  color: #000;
+}
+.place-content {
+  width: 100%;
+  flex: 1;
+  order: 2;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-fade-up 1s ease-out 0s forwards;
+}
+
+.place-content p {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  font-weight: 100;
+  font-size: 36px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+
+@keyframes slide-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slide-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
