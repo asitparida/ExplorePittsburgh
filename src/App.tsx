@@ -70,7 +70,7 @@ class App extends React.Component<any, HomeModel> {
     const overlayClassName = `overlay ${ window['OVERLAY_ADJUST'] || false ? 'adjust': ''}`;
     return (
       <div className="backdrop" id="backdrop">
-        <div className="video">
+        <div className="video" id="video_wrapper">
           <div id="ytplayer" />
         </div>
         <div className={overlayClassName} id="content-overlay">
