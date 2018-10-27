@@ -1,4 +1,17 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script><link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet"/><link rel="manifest" href="/ExplorePittsburgh/manifest.json"><link rel="shortcut icon" href="/ExplorePittsburgh/favicon.ico"><script>mapboxgl.accessToken =
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="manifest" href="/ExplorePittsburgh/manifest.json">
+  <link rel="shortcut icon" href="/ExplorePittsburgh/favicon.ico">
+  <script>
+    mapboxgl.accessToken =
       'pk.eyJ1IjoiYXNpdHBhcmlkYSIsImEiOiJjajJhMzl6OHowMDEzMzJwaTVrdWphY2V4In0.vNu71gEwtnCUsEK671XM0w';
     window['mapboxgl'] = mapboxgl;
 
@@ -35,7 +48,6 @@
     })();
 
     function onPlayerReady() {
-      console.log('onPlayerReady');
       window['YOUTUBE_PLAYER'].setPlaybackQuality('hd1080');
       vis(function () {
         window['YOUTUBE_PLAYER'].playVideo();
@@ -43,15 +55,10 @@
           window['YOUTUBE_PLAYER'].playVideo();
         }, 100);
       });
-<<<<<<< HEAD
       window['YOUTUBE_PLAYER'].playVideo();
-=======
-          
+      setTimeout(() => {
         window['YOUTUBE_PLAYER'].playVideo();
->>>>>>> 2823472d5257eb800a1c3546742f6356c2697b23
-        setTimeout(() => {
-          window['YOUTUBE_PLAYER'].playVideo();
-        }, 100);
+      }, 100);
     }
 
 
@@ -87,4 +94,15 @@
         }
       });
       window['YOUTUBE_PLAYER'] = player;
-    }</script><title>Explore Pittsburgh</title><link href="/ExplorePittsburgh/static/css/main.ce34883b.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ExplorePittsburgh/static/js/main.dd173886.js"></script></body></html>
+    }
+  </script>
+  <title>Explore Pittsburgh</title>
+  <link href="/ExplorePittsburgh/static/css/main.ce34883b.css" rel="stylesheet">
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="text/javascript" src="/ExplorePittsburgh/static/js/main.dd173886.js"></script>
+</body>
+
+</html>
