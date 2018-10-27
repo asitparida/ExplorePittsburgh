@@ -61,7 +61,6 @@
     })();
 
     function onPlayerReady() {
-      console.log('onPlayerReady');
       window['YOUTUBE_PLAYER'].setPlaybackQuality('hd1080');
       vis(function () {
         window['YOUTUBE_PLAYER'].playVideo();
@@ -82,6 +81,8 @@
           window['AdjustOverlay']();
         }
         window['OVERLAY_ADJUST'] = true;
+      } else {
+        onPlayerReady();
       }
     }
 
