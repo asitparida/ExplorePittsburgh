@@ -19,6 +19,9 @@
       console.log('onPlayerReady');
       window['YOUTUBE_PLAYER'].setPlaybackQuality('hd1080');
       window['YOUTUBE_PLAYER'].playVideo();
+      setTimeout(() => {
+        window['YOUTUBE_PLAYER'].playVideo();
+      }, 100);
     }
 
     function onPlayerStateChange(e) {
@@ -43,6 +46,7 @@
           playlist: 'gmE27IDFC_c',
           rel: 0,
           enablejsapi: 1,
+          autoplay: 1,
           origin: 'https://asitparida.github.io'
         },
         events: {
@@ -51,4 +55,4 @@
         }
       });
       window['YOUTUBE_PLAYER'] = player;
-    }</script><title>Explore Pittsburgh</title><link href="/ExplorePittsburgh/static/css/main.041b4dd2.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ExplorePittsburgh/static/js/main.dd173886.js"></script></body></html>
+    }</script><title>Explore Pittsburgh</title><link href="/ExplorePittsburgh/static/css/main.ce34883b.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ExplorePittsburgh/static/js/main.dd173886.js"></script></body></html>
