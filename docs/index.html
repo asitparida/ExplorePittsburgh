@@ -1,1 +1,44 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script><link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet"/><link rel="manifest" href="/ExplorePittsburgh/manifest.json"><link rel="shortcut icon" href="/ExplorePittsburgh/favicon.ico"><script>mapboxgl.accessToken="pk.eyJ1IjoiYXNpdHBhcmlkYSIsImEiOiJjajJhMzl6OHowMDEzMzJwaTVrdWphY2V4In0.vNu71gEwtnCUsEK671XM0w",window.mapboxgl=mapboxgl</script><title>React App</title><link href="/ExplorePittsburgh/static/css/main.26f8c5b2.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ExplorePittsburgh/static/js/main.1222bd89.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script><link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet"/><link rel="manifest" href="/ExplorePittsburgh/manifest.json"><link rel="shortcut icon" href="/ExplorePittsburgh/favicon.ico"><script>mapboxgl.accessToken =
+      'pk.eyJ1IjoiYXNpdHBhcmlkYSIsImEiOiJjajJhMzl6OHowMDEzMzJwaTVrdWphY2V4In0.vNu71gEwtnCUsEK671XM0w';
+    window['mapboxgl'] = mapboxgl;
+
+    window['AdjustOverlay'] = function () {
+      var overlay = document.getElementById('content-overlay');
+      if (overlay) {
+        overlay.classList.add('adjust');
+      }
+      var logo = document.getElementById('logo');
+      if (logo) {
+        var marginTop = window.innerHeight - 175 - 80 - 90 - 120;
+        logo.style.marginTop = marginTop + 'px';
+        logo.style.marginBottom = '15px';
+      }
+    }
+
+    function onPlayerReady() {
+      if (typeof window['AdjustOverlay'] === 'function') {
+        window['AdjustOverlay']();
+      }
+      window['OVERLAY_ADJUST'] = true;
+      window['YOUTUBE_PLAYER'].playVideo();
+    }
+
+    function onYouTubePlayerAPIReady() {
+      let player;
+      player = new window['YT'].Player('ytplayer', {
+        height: window.innerHeight,
+        width: window.innerWidth,
+        videoId: 'gmE27IDFC_c',
+        playerVars: {
+          controls: 0,
+          loop: 1,
+          modestbranding: 1,
+          playlist:'gmE27IDFC_c',
+          rel: 0
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+      window['YOUTUBE_PLAYER'] = player;
+    }</script><title>React App</title><link href="/ExplorePittsburgh/static/css/main.ce34883b.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/ExplorePittsburgh/static/js/main.dd173886.js"></script></body></html>

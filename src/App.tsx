@@ -1,13 +1,15 @@
 import * as React from 'react';
 import './App.css';
 import logo from './assets/explore@2x.png';
-import { PlacesData } from './data';
+import { PlacesData, AddVideo } from './data';
 import { HomeModel, PlaceModel } from './model';
 import Place from './Place/Place';
+import { timingSafeEqual } from 'crypto';
 
 class App extends React.Component<any, HomeModel> {
   private currentIndex = -1;
   private selectedPlace: PlaceModel;
+  private videoAdded = false;
   constructor(props: any) {
     super(props);
     this.state = {
@@ -53,9 +55,25 @@ class App extends React.Component<any, HomeModel> {
         </div>
       </div>)
     });
+    if (!this.videoAdded) {
+      setTimeout(() => {
+        AddVideo();
+      }, 100);
+      this.videoAdded = true;
+    } else {
+      setTimeout(() => {
+        if (typeof window['AdjustOverlay'] === 'function') {
+          window['AdjustOverlay']();
+        }
+      }, 100);
+    }
+    const overlayClassName = `overlay ${ window['OVERLAY_ADJUST'] || false ? 'adjust': ''}`;
     return (
       <div className="backdrop" id="backdrop">
-        <div className="overlay">
+        <div className="video">
+          <div id="ytplayer" />
+        </div>
+        <div className={overlayClassName} id="content-overlay">
           {
             this.state.showContent &&
             <div className="show-toggle back-to-main" onClick={() => { this.backToMain() }}>
@@ -67,10 +85,7 @@ class App extends React.Component<any, HomeModel> {
               <div className="logo-holder">
                 <img src={logo} id="landing_img" />
               </div>
-              <label className="logo-pitts">Pittsburgh</label>
-              <div className="content-width">
-                <p className="landing-description">{this.state.description}</p>
-              </div>
+              <label className="logo-pitts" id="logo">Pittsburgh</label>
             </div>
           }
           {this.state.showContent &&

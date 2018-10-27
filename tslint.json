@@ -17,6 +17,7 @@
     "object-literal-sort-keys": false,
     "no-string-literal": false,
     "no-unused-variable": false,
-    "one-variable-per-declaration": false
+    "one-variable-per-declaration": false,
+    "no-unused-expression": false
   }
 }

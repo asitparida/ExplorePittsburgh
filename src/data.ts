@@ -2,6 +2,7 @@ import CarnegieMesuemArtImg from './assets/carnegie_museum_art.jpg';
 import MattressFactoryImg from './assets/mattress_factory.jpg';
 import DuquesneInclineImg from './assets/duquesne_incline.jpg';
 import ChurchBrewImg from './assets/church_brew.jpg';
+import AndyWarholImg from './assets/any_warhol.jpg'
 import { PlaceModel } from './model';
 export const PlacesData: PlaceModel[] = [
     {
@@ -32,7 +33,7 @@ export const PlacesData: PlaceModel[] = [
                 "people": "Barbara Luderowski",
                 "address": "Northside, 500 Sampsonia Way",
                 "long": -80.012476,
-                "lat": 40.457458, 
+                "lat": 40.457458,
             }
         }
     },
@@ -49,6 +50,22 @@ export const PlacesData: PlaceModel[] = [
                 "address": "South Side, Pittsburgh",
                 "long": -80.017664,
                 "lat": 40.440086
+            }
+        }
+    },
+    {
+        "id": '5',
+        "name": "Andy Warhol Museum",
+        "description": "It is a vital forum in which diverse audiences of artists, scholars, and the general public are galvanized through creative interaction with the art and life of Andy Warhol. The Warhol is ever-changing, constantly redefining itself in relationship to contemporary life using its unique collections and dynamic interactive programming as tools.",
+        "img": AndyWarholImg,
+        "meta": {
+            "boxed": {
+                "verb": "Established In",
+                "date": "1994",
+                "people": "AWFVA",
+                "address": " 117 Sandusky St",
+                "long":  -80.002448,
+                "lat": 40.448563
             }
         }
     },
@@ -78,3 +95,16 @@ export const PlacesData: PlaceModel[] = [
 
 // CHRUCH BREW
 // https://www.flickr.com/photos/theaterwiz/4259326095/in/photolist-7uoafP-6Nfwd
+
+
+// tslint:disable
+export function AddVideo() {
+    console.log('AddVideo Called');
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    const firstScriptTag: any = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+}

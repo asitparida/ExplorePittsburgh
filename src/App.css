@@ -205,10 +205,19 @@ img.show {
   overflow: hidden;
   opacity: 1;
   transition: opacity 0.3s linear 0s;
+  position: relative;
 }
 
 .backdrop.hide {
   opacity: 0;
+}
+.backdrop .video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .backdrop .overlay {
@@ -220,6 +229,12 @@ img.show {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.backdrop .overlay.adjust {
+  justify-content: flex-start;
 }
 
 .backdrop .overlay .logo-holder {
@@ -227,6 +242,12 @@ img.show {
   display: block;
   margin: 0px auto 0 auto;
 }
+
+.backdrop .overlay.adjust .logo-holder {
+  margin-top: 60px;
+}
+
+
 .backdrop .overlay .logo-pitts {
   font-weight: 100;
   font-size: 150px;
@@ -240,6 +261,13 @@ img.show {
 
 .backdrop .overlay .logo-holder img {
   width: 100%;
+}
+
+.backdrop .overlay.adjust .show-toggle {
+  top: 0;
+}
+.backdrop .overlay.adjust .place-content-details {
+  background: rgba(0,0,0,0.80);
 }
 
 .backdrop .landing-content {
@@ -349,6 +377,7 @@ img.show {
   color: #fff;
   opacity: 0.75;
   margin-bottom: 30px;
+  display: none;
 }
 .landing-places {
   width:100%;
@@ -361,8 +390,8 @@ img.show {
 .landing-places .place {
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
-  margin: 0 20px;
-  min-width: 300px;
+  margin: 0 10px;
+  min-width: 250px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -425,6 +454,7 @@ img.show {
   text-align: center;
   font-weight: 100;
   position: relative;
+  font-size: small;
 }
 .landing-places .place p {
   font-weight: 500;
