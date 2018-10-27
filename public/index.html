@@ -42,12 +42,18 @@
     }
 
     function onPlayerReady() {
-      if (typeof window['AdjustOverlay'] === 'function') {
-        window['AdjustOverlay']();
-      }
-      window['OVERLAY_ADJUST'] = true;
+      console.log('onPlayerReady');
       window['YOUTUBE_PLAYER'].setPlaybackQuality('hd1080');
       window['YOUTUBE_PLAYER'].playVideo();
+    }
+
+    function onPlayerStateChange(e) {
+      if (e.data == YT.PlayerState.PLAYING) {
+        if (typeof window['AdjustOverlay'] === 'function') {
+          window['AdjustOverlay']();
+        }
+        window['OVERLAY_ADJUST'] = true;
+      }
     }
 
     function onYouTubePlayerAPIReady() {
@@ -60,11 +66,14 @@
           controls: 0,
           loop: 1,
           modestbranding: 1,
-          playlist:'gmE27IDFC_c',
-          rel: 0
+          playlist: 'gmE27IDFC_c',
+          rel: 0,
+          enablejsapi: 1,
+          origin: 'https://asitparida.github.io'
         },
         events: {
-          'onReady': onPlayerReady
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
         }
       });
       window['YOUTUBE_PLAYER'] = player;
